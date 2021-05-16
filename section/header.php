@@ -35,7 +35,6 @@ $_DESCRIPTION_ = $app->get_desc();
 <script type="text/javascript">less = { javascriptEnabled: true };</script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
-<script type="text/javascript" src="https://unpkg.com/vue-router"></script>
 <script src="//unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.1/socket.io.js"></script>
