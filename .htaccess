@@ -1,5 +1,6 @@
-SetEnv HTTP_SERVER_ROOT "C:/xampp/htdocs/pay_change_webapp"
-
+# Environment variables
+SetEnv HTTP_APP_ENV         "dev"
+SetEnv HTTP_SERVER_ROOT     "C:/xampp/htdocs/pay_change_webapp"
 
 DirectoryIndex /pay_change_webapp/index.php
 
