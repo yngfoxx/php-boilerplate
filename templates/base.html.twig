@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        {% set appFullName    =  'Boiler plate' %}
+        {% set appShortName   =  'boilerplate'  %}
+        {% set appAbbr        =  'BP'           %}
+        {% set appTileColor   =  '#171717'      %}
+        {% set appThemeColor  =  '#171717'      %}
+
+        <meta charset="UTF-8">
+        <title>{% block title %}{{ appFullName }}{% endblock %}</title>
+        {% block meta %}
+        <meta name="theme-color" content="{{ appThemeColor }}" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 " />
+        <meta name="msapplication-TileColor" content="{{ appTileColor }}" />
+        <!-- <meta name="msapplication-TileImage" content=""> -->
+        <!-- <meta name="msapplication-config" content="/media/ico/browserconfig.xml"> -->
+        <meta name="MobileOptimized" content="width" />
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="author" content="Nuke, inc."/>
+        <meta name="title" content="{{ appFullName }}" />
+        <!-- <meta name="keywords" content="esports, africa"/> -->
+        <!-- <meta name="description" content=""> -->
+        <meta property="og:locale" content="en-GB" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="{{ appFullName }}" />
+        <!-- <meta property="og:description" content="" /> -->
+        <!-- <meta property="og:url" content="https://www.exodusleague.com/" /> -->
+        <meta property="og:site_name" content="{{ appFullName }}" />
+        <!-- <meta property="og:image" content="" /> -->
+        <!-- <meta property="og:image:secure_url" content="" /> -->
+        <!-- <meta property="og:image:width" content="512" />
+        <meta property="og:image:height" content="512" /> -->
+        <!-- <meta name="nosnippet"> -->
+
+        <!-- IOS support -->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <!-- <meta name="apple-mobile-web-app-title" content="" /> -->
+
+        <!-- <link rel="canonical" href="" /> -->
+        <link rel="icon" href="favicon.ico">
+        <!-- <link rel="mask-icon" href="/media/ico/safari-pinned-tab.svg" color="#171717" /> -->
+        {% endblock %}
+        {% block stylesheets %}
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+        {% endblock %}
+    </head>
+    <body data-debug=true>
+      {% block header %}{% endblock %}
+
+      {% block body %}{% endblock %}
+
+      {% block footer %}
+      <footer class="mt-5 p-3 text-center">
+        Made with <i style="color: red;" class="fa fa-heart"></i> by <a style="color: #444; text-decoration: underline;" href="https://nuke.com.ng">Nuke Inc</a>
+      </footer>
+      {% endblock %}
+
+      {% block javascripts %}
+        <script type="text/javascript">
+          let debugMode = document.body.dataset.debug;
+              debugMode = (debugMode === 'true' || debugMode === true) ? true : false;
+          let Delog = function() { if (debugMode != true) { console.log('[DEBUGGER] OFF'); return false; } else { console.log('[DEBUGGER] ON'); } };
+          Delog.prototype.log   = (message) => { if (debugMode) console.log(`[LOG] ${message}`); };
+          Delog.prototype.warn  = (message) => { if (debugMode) console.warn(`[WARN] ${message}`); };
+          Delog.prototype.error = (message) => { if (debugMode) console.error(`[ERR] ${message}`); };
+          let dlog = new Delog();
+        </script>
+        <script src="lib/js/ajx.js" charset="utf-8"></script>
+      {% endblock %}
+    </body>
+</html>
