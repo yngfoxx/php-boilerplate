@@ -9,5 +9,5 @@
   # BASE ROUTE
   Route::add('/(.*)', function($path){ $MainController = new MainController($path); });
 
-  Route::run("\/pay_change_webapp");
+  Route::run("\/stephens-php-boilerplate");
 ?>

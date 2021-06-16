@@ -1,19 +1,19 @@
 # Environment variables
 SetEnv HTTP_APP_ENV         "dev"
-SetEnv HTTP_SERVER_ROOT     "C:/xampp/htdocs/pay_change_webapp"
+SetEnv HTTP_SERVER_ROOT     "C:/xampp/htdocs/stephens-php-boilerplate"
 
-DirectoryIndex /pay_change_webapp/index.php
+DirectoryIndex /stephens-php-boilerplate/index.php
 
 # enable apache rewrite engine
 RewriteEngine on
 
 # set your rewrite base
 # Edit this in your init method too if you script lives in a subfolder
-RewriteBase /pay_change_webapp/
+RewriteBase /stephens-php-boilerplate/
 
 # Deliver the folder or file directly if it exists on the server
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 # Push every request to index.php
-RewriteRule ^(.*)$ /pay_change_webapp/index.php [QSA]
+RewriteRule ^(.*)$ /stephens-php-boilerplate/index.php [QSA]
