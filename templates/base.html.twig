@@ -44,6 +44,7 @@
         <!-- <link rel="mask-icon" href="/media/ico/safari-pinned-tab.svg" color="#171717" /> -->
         {% endblock %}
         {% block stylesheets %}
+            <link rel="stylesheet/less" type="text/css" href="assets/less/style.less">
             <link rel="preconnect" href="https://fonts.gstatic.com">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
         {% endblock %}
@@ -69,7 +70,9 @@
           Delog.prototype.error = (message) => { if (debugMode) console.error(`[ERR] ${message}`); };
           let dlog = new Delog();
         </script>
-        <script src="lib/js/ajx.js" charset="utf-8"></script>
+        <script src="//cdn.jsdelivr.net/npm/less@3.13" ></script>
+        <script src="assets/js/ajx.js" charset="utf-8"></script>
+        <script src="assets/js/script.js" charset="utf-8"></script>
       {% endblock %}
     </body>
 </html>

@@ -1,9 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Home | Boilerplate{% endblock %}
+{% block title %}Index | Boilerplate{% endblock %}
 
 {% block stylesheets %}
    {{ parent() }}
+   <link rel="stylesheet/less" type="text/css" href="assets/less/pages/index.style.less">
 {% endblock %}
 
 {% block body %}
@@ -12,8 +13,5 @@
 
 {% block javascripts %}
   {{ parent() }}
-
-  <script type="text/javascript">
-    dlog.log('\"/\" - current directory');
-  </script>
+  <script src="assets/js/pages/index.script.js" charset="utf-8"></script>
 {% endblock %}

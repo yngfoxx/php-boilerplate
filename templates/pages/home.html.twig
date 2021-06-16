@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home | Boilerplate{% endblock %}
+
+{% block stylesheets %}
+   {{ parent() }}
+   <link rel="stylesheet/less" type="text/css" href="assets/less/pages/home.style.less">
+{% endblock %}
+
+{% block body %}
+  <div id="app"></div>
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent() }}
+  <script src="assets/js/pages/home.script.js" charset="utf-8"></script>
+{% endblock %}

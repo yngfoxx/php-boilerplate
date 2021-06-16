@@ -1,47 +1,14 @@
-/* default values */
-@def-font: 100% Helvetica, sans-serif;
-
-// MIXIN ---------------------------------------------->
-.fit_bg_image(@size) {
-  background-size: @size;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.fill_width {
-  width: -moz-available;
-  width: -webkit-fill-available;
-}
-
-.random(@min, @max) {
-  @random: `Math.round(Math.random() * (@{max} - @{min}) + @{min})`;
-}
-// ----------------------------------------------------->
-
-
-:root {
-  --light-green: #4bc64b;
-  --dark-gray: #2d2d2d;
-  --light-gray: #575757;
-  --light-gray-v2: #bfbfbf;
-  --off-white: #e1e1e1;
-  --sec-col: #484848;
-  --sec-dark-color: #373737;
-  --sec-font-col: #acacac;
-  --tet-col: #fff;
-  --white: #fff;
-  --metal-grad: linear-gradient(-133deg, #424242 10%, black 70%, #424242);
-}
+@import "./variables/mixin.less";
+@import "./variables/colors.less";
 
 
 html {
   background-color: var(--dark-gray);
 }
 
-
 body {
   margin: auto;
-  font: @def-font;
+  font: 100% Helvetica, sans-serif;
 }
 
 * {
@@ -56,12 +23,7 @@ select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
-	background: url(../JDS/favicon.ico) 49.5% no-repeat #EEE;
+	background: url(/favicon.ico) 49.5% no-repeat #EEE;
 	width: -moz-available;
 	width: -webkit-fill-available;
-}
-
-
-.hide {
-  display: none !important;
 }

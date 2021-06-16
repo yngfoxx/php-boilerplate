@@ -1,0 +1,18 @@
+.fit_bg_image(@size) {
+  background-size: @size;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.fill_width {
+  width: -moz-available;
+  width: -webkit-fill-available;
+}
+
+.random(@min, @max) {
+  @random: `Math.round(Math.random() * (@{max} - @{min}) + @{min})`;
+}
+
+.hide {
+  display: none !important;
+}
